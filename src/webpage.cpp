@@ -1121,8 +1121,8 @@ qreal stringToPointSize(const QString& string)
         { "mm", 72 / 25.4 },
         { "cm", 72 / 2.54 },
         { "in", 72 },
-        { "px", 72.0 / PHANTOMJS_PDF_DPI },
-        { "", 72.0 / PHANTOMJS_PDF_DPI }
+        { "px", 72.0 / PHANTOMJS_PDF_DPI * 2.54 },
+        { "", 72.0 / PHANTOMJS_PDF_DPI  * 2.54 }
     };
     for (uint i = 0; i < sizeof(units) / sizeof(units[0]); ++i) {
         if (string.endsWith(units[i].unit)) {
